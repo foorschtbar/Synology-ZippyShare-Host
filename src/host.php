@@ -113,7 +113,7 @@ class ZippyShare
 		if (!(preg_match('/<title>([^\n\<]*)<\/title>/i', $zippy_page, $title)))
 			return $downloadINFO[DOWNLOAD_ERROR] = ERR_FILE_NO_EXIST;
 		
-		if (stripos($title[1],'Zippyshare.com - ') === false)
+		if (stripos($title[1],'Zippyshare.com') === false)
 			return $downloadINFO[DOWNLOAD_ERROR] = ERR_FILE_NO_EXIST;
 		
 		if (stripos($zippy_page,'File does not exist on this server') !== false)
